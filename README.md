@@ -108,4 +108,6 @@ nothing added to commit but untracked files present (use "git add" to track)
 Dropped stash@{0} (5a87ea9a6687e5df9448a9a18b81659a35352001)
 ➜  bundle-1 git:(dev) ✗ git reset --hard
 HEAD is now at 15e609e add files
+➜  bundle-1 git:(dev) ✗ git clean -f
+Removing team.html
 ```

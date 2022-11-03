@@ -43,3 +43,69 @@ Switched to branch 'dev'
 ➜  bundle-1 git:(dev) git branch test -d
 Deleted branch test (was 9e677e7).
 ```
+
+### Exercise 2
+
+```bash
+➜  bundle-1 git:(dev) ✗ touch home.html
+➜  bundle-1 git:(dev) ✗ git stash -u 
+Saved working directory and index state WIP on dev: 9e677e7 first commit
+➜  bundle-1 git:(dev) touch about.html
+➜  bundle-1 git:(dev) ✗ git stash -u    
+Saved working directory and index state WIP on dev: 9e677e7 first commit
+➜  bundle-1 git:(dev) touch team.html 
+➜  bundle-1 git:(dev) ✗ git stash -u   
+Saved working directory and index state WIP on dev: 9e677e7 first commit
+➜  bundle-1 git:(dev) git stash pop stash@{1}
+Already up to date.
+On branch dev
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        about.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+Dropped stash@{1} (1665f48b0fea4ad791ef0c0474ace26cb4352453)
+➜  bundle-1 git:(dev) ✗ git stash pop stash@{1}
+Already up to date.
+On branch dev
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        about.html
+        home.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+Dropped stash@{1} (3a57879d3d7828ca5d8fd4e14732065411523aed)
+➜  bundle-1 git:(dev) ✗ git add .
+➜  bundle-1 git:(dev) ✗ git commit -m 'add files'
+[dev 3b4af54] add files
+ 2 files changed, 12 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 home.html
+➜  bundle-1 git:(dev) ✗ git commit -am 'add files'
+[dev 15e609e] add files
+ 1 file changed, 12 insertions(+)
+➜  bundle-1 git:(dev) git push origin dev       
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 736 bytes | 184.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'dev' on GitHub by visiting:
+remote:      https://github.com/jacob-js/thegym-git-exercise-bundle-1/pull/new/dev
+remote: 
+To https://github.com/jacob-js/thegym-git-exercise-bundle-1.git
+ * [new branch]      dev -> dev
+➜  bundle-1 git:(dev) git stash pop stash@{0}   
+Already up to date.
+On branch dev
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        team.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+Dropped stash@{0} (5a87ea9a6687e5df9448a9a18b81659a35352001)
+➜  bundle-1 git:(dev) ✗ git reset --hard
+HEAD is now at 15e609e add files
+```

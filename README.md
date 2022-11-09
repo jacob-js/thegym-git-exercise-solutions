@@ -215,3 +215,107 @@ Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
 To https://github.com/jacob-js/thegym-git-exercise-bundle-1.git
    7799202..79984ad  ft/service-redesign -> ft/service-redesign
 ```
+
+## Bundle 3
+
+## Exercise 1
+
+```bash
+➜  bundle-1 git:(ft/service-redesign) git checkout -b ft/team-page
+Switched to a new branch 'ft/team-page'
+➜  bundle-1 git:(ft/team-page) git add .
+➜  bundle-1 git:(ft/team-page) ✗ git commit -m 'add team page'
+[ft/team-page 9b5b7f8] add team page
+ 1 file changed, 12 insertions(+)
+ create mode 100644 team.html
+➜  bundle-1 git:(ft/team-page) git push
+fatal: The current branch ft/team-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/team-page
+
+➜  bundle-1 git:(ft/team-page) git push origin ft/team-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 449 bytes | 449.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/jacob-js/thegym-git-exercise-bundle-1/pull/new/ft/team-page
+remote: 
+To https://github.com/jacob-js/thegym-git-exercise-bundle-1.git
+ * [new branch]      ft/team-page -> ft/team-page
+➜  bundle-1 git:(ft/team-page) git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+➜  bundle-1 git:(main) git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+➜  bundle-1 git:(ft/contact-page) git checkout ft/team-page
+Switched to branch 'ft/team-page'
+➜  bundle-1 git:(ft/team-page) git log
+➜  bundle-1 git:(ft/team-page) git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+➜  bundle-1 git:(ft/contact-page) git show
+➜  bundle-1 git:(ft/contact-page) git cherry-pick 9b5b7f82a7ffc11075a9d39df9e4e6cce293404a
+[ft/contact-page a273931] add team page
+ Date: Wed Nov 9 11:25:30 2022 +0200
+ 1 file changed, 12 insertions(+)
+ create mode 100644 team.html
+➜  bundle-1 git:(ft/contact-page) git add .
+➜  bundle-1 git:(ft/contact-page) ✗ git commit -m 'add contact page'
+[ft/contact-page 1962dfe] add contact page
+ 1 file changed, 12 insertions(+)
+ create mode 100644 contact.html
+➜  bundle-1 git:(ft/contact-page) git push origin ft/contact-page
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 689 bytes | 689.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/jacob-js/thegym-git-exercise-bundle-1/pull/new/ft/contact-page
+remote: 
+To https://github.com/jacob-js/thegym-git-exercise-bundle-1.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+ ➜  bundle-1 git:(ft/contact-page) git checkout -b ft/faq-page
+Switched to a new branch 'ft/faq-page'
+➜  bundle-1 git:(ft/faq-page) git add .
+➜  bundle-1 git:(ft/faq-page) ✗ git commit -m 'create faq page'
+[ft/faq-page 874f998] create faq page
+ 1 file changed, 12 insertions(+)
+ create mode 100644 faq.html
+➜  bundle-1 git:(ft/faq-page) git push origin ft/faq-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 440 bytes | 440.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/jacob-js/thegym-git-exercise-bundle-1/pull/new/ft/faq-page
+remote: 
+To https://github.com/jacob-js/thegym-git-exercise-bundle-1.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+➜  bundle-1 git:(ft/faq-page) git revert 9b5b7f82a7ffc11075a9d39df9e4e6cce293404a
+[ft/faq-page 0bca3fa] Revert "add team page"
+ 1 file changed, 12 deletions(-)
+ delete mode 100644 team.html
+➜  bundle-1 git:(ft/faq-page) git push origin ft/faq-page
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 268 bytes | 268.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/jacob-js/thegym-git-exercise-bundle-1.git
+   874f998..0bca3fa  ft/faq-page -> ft/faq-page
+```

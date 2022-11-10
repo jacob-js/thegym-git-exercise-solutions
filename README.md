@@ -218,7 +218,7 @@ To https://github.com/jacob-js/thegym-git-exercise-bundle-1.git
 
 ## Bundle 3
 
-## Exercise 1
+### Exercise 1
 
 ```bash
 ➜  bundle-1 git:(ft/service-redesign) git checkout -b ft/team-page
@@ -363,4 +363,39 @@ remote:
 To https://github.com/jacob-js/thegym-git-exercise-bundle-1.git
  * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
 ➜  bundle-1 git:(ft/home-page-redesign) 
+```
+
+## Bundle 4
+
+### Exercise 1
+
+```bash
+➜  bundle-1 git:(ft/home-page-redesign) git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+➜  bundle-1 git:(main) git remote add git-copy https://github.com/jacob-js/git-exercises-2.git
+➜  bundle-1 git:(main) git commit -am 'update home page'
+[main 72754d2] update home page
+ 1 file changed, 1 insertion(+)
+➜  bundle-1 git:(main) git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 321 bytes | 160.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/jacob-js/thegym-git-exercise-bundle-1.git
+   09b0f22..72754d2  main -> main
+➜  bundle-1 git:(main) git push git-copy main
+Enumerating objects: 24, done.
+Counting objects: 100% (24/24), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (21/21), done.
+Writing objects: 100% (24/24), 2.69 KiB | 196.00 KiB/s, done.
+Total 24 (delta 9), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (9/9), done.
+To https://github.com/jacob-js/git-exercises-2.git
+ * [new branch]      main -> main
+➜  bundle-1 git:(main) 
 ```

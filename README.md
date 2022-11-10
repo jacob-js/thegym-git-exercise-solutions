@@ -399,3 +399,64 @@ To https://github.com/jacob-js/git-exercises-2.git
  * [new branch]      main -> main
 ➜  bundle-1 git:(main) 
 ```
+
+### Exercise 2
+
+```bash
+➜  bundle-1 git:(main) git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+➜  bundle-1 git:(ft/footer) git add .
+➜  bundle-1 git:(ft/footer) ✗ git commit -m 'create footer page'
+[ft/footer c4120a8] create footer page
+ 1 file changed, 12 insertions(+)
+ create mode 100644 footer.html
+➜  bundle-1 git:(ft/footer) git commit -am 'update footer page'
+[ft/footer a18b647] update footer page
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+➜  bundle-1 git:(ft/footer) git push origin ft/footer
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 725 bytes | 241.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/jacob-js/thegym-git-exercise-bundle-1/pull/new/ft/footer
+remote: 
+To https://github.com/jacob-js/thegym-git-exercise-bundle-1.git
+ * [new branch]      ft/footer -> ft/footer
+➜  bundle-1 git:(ft/footer) git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+➜  bundle-1 git:(main) git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+➜  bundle-1 git:(ft/squashing) git merge --squash ft/footer
+Updating 72754d2..a18b647
+Fast-forward
+Squash commit -- not updating HEAD
+ footer.html | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+ create mode 100644 footer.html
+➜  bundle-1 git:(ft/squashing) ✗ git add .
+➜  bundle-1 git:(ft/squashing) ✗ git commit -m 'footer changes squashing'
+[ft/squashing afcb0a3] footer changes squashing
+ 1 file changed, 12 insertions(+)
+ create mode 100644 footer.html
+➜  bundle-1 git:(ft/squashing) git push origin ft/squashing
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 465 bytes | 232.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/jacob-js/thegym-git-exercise-bundle-1/pull/new/ft/squashing
+remote: 
+To https://github.com/jacob-js/thegym-git-exercise-bundle-1.git
+ * [new branch]      ft/squashing -> ft/squashing
+➜  bundle-1 git:(ft/squashing) 
+```
